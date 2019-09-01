@@ -1,0 +1,9 @@
+me.remind.user.github
+me.remind.user.github.configuration
+me.remind.user.github.controller
+me.remind.user.github.dao
+me.remind.user.github.dto
+me.remind.user.github.exception
+me.remind.user.github.model
+me.remind.user.github.service
+me.remind.user.github.service.impl
