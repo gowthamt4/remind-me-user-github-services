@@ -11,7 +11,7 @@ Generate the token through Personal access token and pass as an VM argument when
 mvn clean install
 
 ## Run the application
-java -Dgithub.token=<pass the token> -jar target/app.jar
+java -Dgithub.token=<--pass the token--> -jar target/app.jar
 
 Eventhough the VM argument is not passed the application can invoke the Github services but the ratelimit will be in effect
 
