@@ -29,7 +29,7 @@ public class RepositoryDTO {
         return name;
     }
 
-    @JsonProperty("name")
+    @JsonProperty("RepoName")
     public void setName(final String name) {
         this.name = name;
     }
