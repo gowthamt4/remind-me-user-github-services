@@ -1,4 +1,4 @@
-# remind-me-user-github-services
+# user-github-services
 
 ## Points to Consider
 - As this is non-production environment we can use Basic authentication to invoke Github services using [Personal access tokens](https://github.com/settings/tokens)
