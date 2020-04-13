@@ -79,22 +79,4 @@ public class GitHubServiceImplTest {
         Assert.assertFalse(repositoryDetails.isEmpty());
         Mockito.verify(restTemplate);
     }
-
-    @Test(expected = UserNotFoundException.class)
-    public void testHttpClientErrorExceptionFromGitHub() {
-        RestTemplate restTemplate = Mockito.mock(RestTemplate.class);
-
-        // Mock call to GitHub
-        Mockito.when(restTemplate.exchange(Mockito.anyString(),
-                Mockito.any(HttpMethod.class), Mockito.any(HttpEntity.class),
-                Mockito.any(ParameterizedTypeReference.class)))
-                .thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
-
-        ReflectionTestUtils.setField(gitHubServiceImpl, "restTemplate", restTemplate);
-
-        List<RepositoryDTO> repositoryDetails = gitHubServiceImpl.getRepositoryLanguageInfo("mojombo");
-        Mockito.verify(restTemplate);
-       // Assert.assertNotNull(repositoryDetails);
-        // Assert.assertFalse(repositoryDetails.isEmpty());
-    }
 }
